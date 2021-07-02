@@ -1,0 +1,32 @@
+
+.box-search{
+    .box-search-product{
+        //border: 2px solid green;
+        padding:  1rem 1rem;
+        margin-bottom: 0 !important;
+        label{
+            margin: 0;
+            i{
+                margin: 0 1rem;
+            }
+        }
+    }
+    border: 2px solid rgba(100, 98, 98, 0.13);
+    border-radius: 10px;
+}
+
+.msg-consult{
+    padding: 1rem 2rem ;
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        p{
+            margin:0;
+        }
+        i{
+            margin: 0 1rem 0 0;
+        }
+    }
+}

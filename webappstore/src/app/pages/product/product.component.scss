@@ -1,0 +1,39 @@
+
+.info-registro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    p{
+        margin: 0;
+    }
+}
+
+
+
+
+.cont-product{
+
+    
+    margin: 0.5rem 2rem;
+    
+    ul{
+        li{
+            button{
+                width: 140px;
+                i{
+                    margin: 0 1rem 0 0;
+                    font-size: 20px;
+                    color: #eaeaff ; // #adadff ; // #2323b2; //   #0a0a33;
+                }
+            }
+        }
+    }
+    .tab-content{
+        position: relative;
+        //overflow: scroll;
+        height: 517px;
+    }
+}
+
+

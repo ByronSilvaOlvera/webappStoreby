@@ -1,0 +1,88 @@
+
+$cardColor : #ccccff;
+$colorMain : #e5e5ff;
+
+.category-form{
+    //border: 2px solid red ;
+    padding: 1rem 2rem;
+    // background-color: $cardColor;
+    // .mb-3{
+    //     input[type="text"]{
+    //         background-color: $colorMain;
+    //     }
+    // }
+}
+
+
+.btn-form-category{
+    padding: 1rem 0 1rem 0;
+    button{
+        width: 130px;
+        margin: 0 1rem 0 0;
+        i{
+            margin: 0 0.6rem 0 0;
+        }
+    }
+}
+
+
+@media (max-width: 480px){
+    
+    .btn-form-category{
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem 0 0.5rem 0;
+        }
+    }
+   
+}
+
+@media (max-width: 768px){
+    
+    .btn-form-category{
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem 0 0.5rem 0;
+        }
+    }
+   
+}
+
+.title-category-form{
+    padding: 0.8rem 0;
+}
+
+.form-msg-category{
+    div:nth-child(1){
+        div:nth-child(1){
+            font-size: 25px;
+            i{
+                padding: 0 1rem 0 0 ;
+            }
+        }
+    }
+    .btn-form-msg{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            width: 130px;
+        }
+    }
+}

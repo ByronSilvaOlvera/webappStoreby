@@ -1,0 +1,50 @@
+<div *ngIf="panelstatus && product">
+  <div class="card">
+    <h5 [ngClass]="'card-header ' + classtext">Product</h5>
+    <div class="card-body">
+      <div class="name">
+        <h5 class="card-title">Name: {{ product.name }}</h5>
+
+      </div>
+      <div class="description">
+
+        <div class="image">
+          <i [class]="'fab fa-product-hunt ' + classtext "></i>
+        </div>
+        <div class="data">
+
+          <p class="card-text"><b>Color:</b> {{ product.color }}</p>
+          <p class="card-text"><b>Category:</b> {{ product.category.name }}</p>
+          <p class="card-text"><b>Size:</b> {{ product.size }}</p>
+          <p class="card-text"><b>Price:</b> {{ product.price }}</p>
+          <p class="card-text store-name-detail"><b>Stores:</b></p>
+          <div class="store-detail" >
+            <span *ngFor="let sto of product.stores" class="badge bg-info text-dark" >{{ sto.name }} <br></span>  
+          </div>
+          <p class="card-text"><b>Create:</b> {{ product.createdAt }}</p>
+        </div>
+      </div>
+      <div class="btn-detail">
+        <button type="button" class="btn btn-outline-danger" (click)="onDelete(product.id!)"
+          *ngIf="btndelete">
+          <i class="fas fa-trash-alt"></i>
+          Delete</button>
+
+        <button type="button" class="btn btn-outline-dark" (click)="onList()">
+          <i class="fas fa-list"></i>
+          List</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="form-msg"  *ngIf="!panelstatus">
+
+  <div class="alert alert-primary d-flex align-items-center" role="alert">
+    <div>
+      <i class="fas fa-exclamation-triangle"></i>
+    </div>
+    <div>
+       Select a product in List panel
+    </div>
+  </div>
+</div>

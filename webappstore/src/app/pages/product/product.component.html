@@ -1,0 +1,65 @@
+
+<app-header-content [id]="id " [namepage]="menu.title!" [iconheader]="menu.icon!" ></app-header-content>
+
+<div class="cont-product" >
+
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" 
+      aria-controls="pills-home" aria-selected="true"
+       (click)="onListPro()" > 
+       <i class="far fa-hand-pointer"></i> List
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-create-tab" data-bs-toggle="pill" data-bs-target="#pills-create" type="button" role="tab" aria-controls="pills-create" aria-selected="false"
+      (click)="onCreate()">
+      <i class="far fa-hand-pointer"></i>
+          Create</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-update-tab" data-bs-toggle="pill" data-bs-target="#pills-update" type="button" role="tab" aria-controls="pills-update" aria-selected="false"
+      (click)="onUpdate()" >  <i class="far fa-hand-pointer"></i> Update</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-detail-tab" data-bs-toggle="pill" data-bs-target="#pills-detail" type="button" role="tab" aria-controls="pills-detail" aria-selected="false"
+        (click)="ondetail()" >  <i class="far fa-hand-pointer"></i> Detail </button>
+      </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-consult-tab" data-bs-toggle="pill" data-bs-target="#pills-consult" type="button" role="tab" aria-controls="pills-consult" aria-selected="false"
+        (click)="onConsult()" >  <i class="far fa-hand-pointer"></i> Consult </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-delete-tab" data-bs-toggle="pill" data-bs-target="#pills-delete" type="button" role="tab" aria-controls="pills-delete" aria-selected="false"
+      (click)="ondelete()" >  <i class="far fa-hand-pointer"></i> Delete </button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <app-grid-product ></app-grid-product>
+      </div>
+    <div class="tab-pane fade" id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab">
+      <app-form></app-form>
+    </div>
+    <div class="tab-pane fade" id="pills-update" role="tabpanel" aria-labelledby="pills-update-tab">
+      <app-form></app-form>
+    </div>
+    <div class="tab-pane fade" id="pills-detail" role="tabpanel" aria-labelledby="pills-detail-tab">
+      <app-detail-product></app-detail-product>
+    </div>
+    <div class="tab-pane fade" id="pills-consult" role="tabpanel" aria-labelledby="pills-consult-tab">
+      <app-consult-product></app-consult-product>
+    </div>
+    <div class="tab-pane fade" id="pills-delete" role="tabpanel" aria-labelledby="pills-delete-tab">
+      <app-detail-product></app-detail-product>
+    </div>
+  </div>
+</div>
+  
+  
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-atom" [fullScreen]="true">
+    <p style="color: rgb(24, 3, 3)"> Loading... </p>
+  </ngx-spinner>
+  
+  

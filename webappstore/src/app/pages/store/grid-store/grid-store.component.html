@@ -1,0 +1,62 @@
+<div class="grid"  *ngIf="stores.length" > 
+    <table class="table"   >
+        <thead class="grid-header">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contry</th>
+            <th scope="col">City</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody class="grid-body">
+
+          <tr class="fila" *ngFor="let store of stores; index as i " >
+            <td>{{ i + 1}} </td>
+            <td>{{ store.name }}</td>
+            <td>{{ store.country }}</td>
+            <td>{{ store.city }}</td>
+          
+            <td class="option">
+              <button type="button" class="btn btn-outline-info rounded-circle btn-table" 
+              (click)="onDetail(store.id!)">
+                <i class="fas fa-info"></i>
+              </button>
+              <button type="button" class="btn btn-outline-warning rounded-circle btn-table"
+                (click)="onUpdate(store.id!)">
+                <i class="fas fa-pen"></i>
+              </button>
+              <button type="button" class="btn btn-outline-danger rounded-circle btn-table"
+                (click)="onDelete(store.id!)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td></td>
+            <td colspan="3"> 
+              <div class="btn-group btn-paginacion" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">
+                  <i class="fas fa-arrow-left"></i>
+                </button>
+                <button type="button" class="btn btn-warning">Page 1 </button>
+                <button type="button" class="btn btn-success">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </td>
+            
+            <td></td>
+          </tr> -->
+          
+        </tbody>
+        
+      </table>
+</div>
+<div *ngIf="!(stores.length > 0)" class="grid-msg"  >
+
+  <div class="alert alert-warning" role="alert">
+    <i class="fas fa-battery-empty"></i>
+    No exist data!
+  </div>
+</div>

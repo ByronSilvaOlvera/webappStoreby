@@ -1,0 +1,136 @@
+
+
+.grid{
+    position: relative;
+    padding: 0 1rem;
+    overflow-y: hidden;
+    height: 500px;
+
+}
+
+.grid-consult{
+    position: relative;
+    padding: 0 1rem;
+    overflow-y: hidden;
+    height: 451px;
+
+}
+
+.option{
+    button{
+
+        width: 40px;
+        height: 40px;
+        margin: 0 0.5rem 0 0;
+    }
+}
+
+.grid-header{
+    
+    overflow: hidden;
+    tr{
+        //display: inline-table;
+        th{
+            max-width: 100px;
+            text-align: start;
+            overflow: hidden;
+        }
+        th:nth-child(2){
+            width: 25%;
+        }
+        th:nth-child(3),
+        th:nth-child(4)
+        {
+            width: 20%;
+        }
+    }
+}
+
+.grid-body{
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 98%;
+    height: 457px;
+    tr{
+        display: inline-table;
+        width: 100%;
+        align-content: flex-start;
+        td{
+            max-width: 100px;
+            text-align: start;
+            overflow: hidden;
+        }
+        td:nth-child(1){
+            width: 10%;
+        }
+        td:nth-child(2){
+            width: 25%;
+        }
+        td:nth-child(3){
+            width: 20%;
+        }
+        td:nth-child(4){
+            width: 20%;
+        }
+    }
+}
+
+.btn-paginacion{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+
+
+.grid-body-consult{
+    position: absolute;
+    overflow: scroll;
+    width: 98%;
+    overflow-x: hidden;
+    height: 394px;
+    tr{
+        display: inline-table;
+        width: 100%;
+        align-content: flex-start;
+        td{
+            max-width: 100px;
+            text-align: start;
+            overflow: hidden;
+        }
+        td:nth-child(1){
+            width: 10%;
+        }
+        td:nth-child(2){
+            width: 25%;
+        }
+        td:nth-child(3){
+            width: 20%;
+        }
+        td:nth-child(4){
+            width: 20%;
+        }
+    }
+}
+
+
+
+.grid-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    //border: 2px solid orange;
+    div{
+        width: 40%;
+        padding: 2rem 3rem;
+        font-size: 25px;
+        i{
+            font-size: 30px;
+            margin: 0 1rem 0 0;
+        }
+
+    }
+}

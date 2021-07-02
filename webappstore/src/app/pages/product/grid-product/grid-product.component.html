@@ -1,0 +1,66 @@
+<div [ngClass]="classgrid" *ngIf="products.length > 0" >
+    <table class="table"   >
+        <thead class="grid-header">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Color</th>
+            <th scope="col">Size</th>
+            <th scope="col">Options</th>
+          </tr>
+        </thead>
+        <tbody [ngClass]="classtbbody" >
+
+          <tr class="fila" *ngFor="let product of products; index as i " >
+            <td>{{ i + 1}} </td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.color }}</td>
+            <td>{{ product.size }}</td>
+          
+            <td class="option">
+              <button type="button" class="btn btn-outline-info rounded-circle btn-table" 
+              (click)="onDetail(product.id!)">
+                <i class="fas fa-info"></i>
+              </button>
+              <button type="button" class="btn btn-outline-warning rounded-circle btn-table"
+                (click)="onUpdate(product.id!)">
+                <i class="fas fa-pen"></i>
+              </button>
+              <button type="button" class="btn btn-outline-danger rounded-circle btn-table"
+                (click)="onDelete(product.id!)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf=" !(pagemax < 9) " >
+            <td></td>
+            <td colspan="3"> 
+              <div class="btn-group btn-paginacion" role="group" 
+                aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger"
+                  (click)="onLeft()"
+                ><i class="fas fa-arrow-left"></i></button>
+                <button type="button" class="btn btn-warning">
+                  Page {{ page }}</button>
+                <button type="button" class="btn btn-success"
+                  (click)="onRight()" > 
+                <i class="fas fa-arrow-right"></i>
+               </button>
+              </div>
+            </td>
+            
+            <td></td>
+          </tr>
+          
+        </tbody>
+        
+      </table>
+</div>
+
+<div *ngIf="!(products.length > 0)" class="grid-msg"  >
+
+  <div class="alert alert-warning" role="alert">
+    <i class="fas fa-battery-empty"></i>
+    No exist data!
+  </div>
+</div>

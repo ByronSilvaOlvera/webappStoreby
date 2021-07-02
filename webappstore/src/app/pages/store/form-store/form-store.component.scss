@@ -1,0 +1,12 @@
+.btn-form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 1.8rem 0;
+    button{
+        width: 130px;
+        height: 50px;
+        margin: 0 1rem 0 0;
+    }
+}

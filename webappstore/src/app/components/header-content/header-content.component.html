@@ -1,0 +1,31 @@
+<div class="title-category">
+    <div class="card">
+      <div class="card-body">
+        <div class="Name-view">
+          <i [ngClass]="iconheader"></i>
+          <span>{{namepage}}</span>
+        </div>
+        
+        <div class="transaccion" >
+          <div>
+            <p><span> {{  id==0? 'Not register' : 'Registro: ' +id }} </span> </p>
+          </div>
+          <!-- <div>
+            <p><span>Date: </span><span>25-06-2021</span></p>
+          </div> -->
+          <div class="card-user" >
+            <div class="user">
+              <!-- <i class="fas fa-portrait"></i> -->
+              <i class="fas fa-user-circle"></i>
+              
+              <p><span>User: </span><span>Alian Suarez</span></p>
+            </div>
+            <div class="date" >
+              <small>Date: {{ dia }}</small>
+            </div>
+          </div>
+        </div>
+   
+      </div>  
+    </div>
+  </div>

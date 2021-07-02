@@ -1,0 +1,30 @@
+.not-found{
+    svg{
+        width: 100%;
+    }
+}
+
+.home-pga{
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    font-size: 6rem;
+    color: #19197f;
+    h5{
+        letter-spacing: 2rem;
+        font-size: 2rem;
+    }
+    .information{
+        font-size: 1rem;
+        button{
+            width: 150px;
+            height: 50px;
+        }
+        p{
+            i{
+                margin: 0 2rem 0 0 ;
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

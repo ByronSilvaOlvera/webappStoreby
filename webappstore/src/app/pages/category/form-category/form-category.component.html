@@ -1,0 +1,69 @@
+<div class="category-form card" *ngIf="mostarform" >
+  <div class="title-category-form"  >
+    <h5 class="card-title" *ngIf="title" >
+      Insert Category
+    </h5>
+    <h5 class="card-title" *ngIf="!title" >
+      Update Category
+      <small class="text-muted" ></small>
+    </h5>
+  </div>
+  <form [formGroup]="categoryForm" (ngSubmit)="onSave()" >
+
+    <div class="mb-3">
+      <label for="name" class="form-label">
+        Name </label>
+      <input 
+            type="text" 
+            class="form-control" 
+            id="name"
+            placeholder="name"
+            formControlName="name"    
+            >
+            <div *ngIf="validacion" class="text-danger">
+                Please provide a valid .
+            </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">
+        Key Words </label>
+      <input type="text" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="key words"
+            formControlName="keywords"
+        >
+        <div *ngIf="validacion" class="text-danger">
+            Please provide a valid .
+        </div>
+    </div>
+    <div class="btn-form-category">
+      <button type="submit" class="btn btn-outline-success">
+        <i class="fas fa-save"></i>
+        {{ title == true? 'Save' : 'Update'  }}
+      </button>
+      <button type="button" class="btn btn-outline-dark" 
+        (click)="resetForm()">
+        <i class="far fa-hand-peace"></i>
+        Reset
+      </button>
+      <button type="button" class="btn btn-outline-dark"
+        (click)="onLists()">
+        <i class="fas fa-list"></i>
+        List
+      </button>
+
+    </div>
+  </form>
+</div>
+<div class="form-msg-category" *ngIf="!mostarform"  >
+  <div class="alert alert-primary d-flex align-items-center" role="alert">
+    
+    <div class="icons" >
+      <i class="fas fa-exclamation"></i>
+    </div>
+    <div>
+      Select a category from then List
+    </div>
+  </div>
+</div>

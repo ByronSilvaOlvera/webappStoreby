@@ -1,0 +1,157 @@
+<div class="form-data" *ngIf="mostrarForm" >
+    <div class="cardz">
+
+      <h5 class="card-title">Data entry </h5>
+      <hr>
+    </div>
+    <form [formGroup]="storeForm" (ngSubmit)="onSubmit()"  >
+
+        <div class="mb-3 row">
+          <label for="name" class="col-sm-2 form-label">
+            Name </label>
+            <div class="col-sm-10" >
+
+              <input 
+              type="text" 
+              class=" form-control" 
+              id="name"
+              placeholder="name"
+              formControlName="name"    
+              >
+            </div>
+                <div *ngIf="msgValidation" class="text-danger">
+                    Please provide a valid .
+                </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="street" class="form-label col-sm-2">
+              Street </label>
+              <div class="col-sm-10" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="street"
+                placeholder="street"
+                formControlName="street"    
+                >
+                <div *ngIf="msgValidation" class="text-danger">
+                  Please provide a valid .
+                </div>
+              </div>  
+          </div>
+          <div class="mb-3 row">
+            <label for="number" class="col-sm-2 form-label">
+              Number </label>
+              <div class="col-sm-10" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="number"
+                placeholder="number"
+                formControlName="number"    
+                >
+              </div>  
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="zipcode" class="col-sm-2 form-label">
+              ZipCode </label>
+              <div class="col-sm-10" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="zipcode"
+                placeholder="zipcode"
+                formControlName="zipcode"    
+                >
+              </div>
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="city" class="col-sm-2 form-label">
+              City </label>
+            <div class="col-sm-10" >
+              
+              <input 
+              type="text" 
+              class="form-control" 
+              id="city"
+              placeholder="city"
+              formControlName="city"    
+              >
+            </div>  
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="country" class="col-sm-2 form-label">
+              Country </label>
+            <div class="col-sm-10" >
+
+              <input 
+              type="text" 
+              class="form-control" 
+              id="country"
+              placeholder="country"
+              formControlName="country"    
+              >
+            </div>  
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          <!-- <div class="mb-3 row">
+            <label for="product" class="col-sm-2 form-label">
+              Product </label>
+            <div class="col-sm-10" >
+
+              <input 
+              type="text" 
+              class="form-control" 
+              id="product"
+              placeholder="product"
+              formControlName="product"    
+              >
+            </div>  
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div> -->
+          <div class="btn-form">
+            <button type="submit" class="btn btn-outline-success">
+                <i class="fas fa-save"></i>
+                 {{ update == true? 'Update' : 'Save'  }} 
+ 
+              </button>
+              <button type="button" class="btn btn-outline-dark" 
+                (click)="resetForm()">
+                <i class="far fa-hand-peace"></i>
+                Reset
+              </button>
+              <button type="button" class="btn btn-outline-dark"
+                (click)="onListTab()">
+                <i class="fas fa-list"></i>
+                List
+              </button>
+          </div>
+    </form>
+</div>
+<div  class="form-msg" *ngIf="mostrarMsg" >
+    <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <div>
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div>
+          Select a product in List panel
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,15 @@
+
+<div class="navbar" >
+    <ul class="navbar-item">
+        <li  *ngFor="let menu of menus"  (click)="chooseMenu(menu)"  >
+            <a  routerLink="{{menu.link}}/" >
+                <div class="icons-navbar">
+                    <i [ngClass]="menu.icon!"></i>
+                </div>
+                <div class="title-navbar">
+                    <span>{{ menu.title }}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

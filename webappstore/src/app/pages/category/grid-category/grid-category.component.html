@@ -1,0 +1,42 @@
+<div *ngIf="categories.length > 0" >
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">KeyWord</th>
+        <th scope="col" style="text-align: center;">Option</th>
+      </tr>
+    </thead>
+    <tbody class="grid-body" >
+      <tr *ngFor="let category of categories; index as i ">
+        <td> {{ i+1 }} </td>
+        <td>{{ category.name}}</td>
+        <td>{{ category.keywords }}</td>
+        <td class="option-table">
+          <button type="button" class="btn btn-outline-info rounded-circle btn-table" 
+          (click)="onDetail(category.id!)">
+            <i class="fas fa-info"></i>
+          </button>
+          <button type="button" class="btn btn-outline-warning rounded-circle btn-table"
+            (click)="onUpdate(category.id!)">
+            <i class="fas fa-pen"></i>
+          </button>
+          <button type="button" class="btn btn-outline-danger rounded-circle btn-table"
+            (click)="onDelete(category.id!)">
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>
+<div *ngIf="!(categories.length > 0)" class="grid-msg"  >
+
+  <div class="alert alert-warning" role="alert">
+    <i class="fas fa-battery-empty"></i>
+    No exist data!
+  </div>
+</div>

@@ -1,0 +1,170 @@
+
+POST http://localhost:8092/api/product/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "Air Condition",
+    "color"   : "red",
+    "categoryId": "1",
+    "size"    : "mediano",
+    "price"   : "100.25",
+    "store"   : "1"
+}
+
+####
+
+POST http://localhost:8092/api/product/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "product" : {
+        "name"    : "TV HD 55 INCH",
+        "color"   : "red",
+        "categoryId": "1",
+        "size"    : "mediano",
+        "price"   : "425.25"
+    },
+    "stores"   : [
+        {
+            "id" :"1"
+        },
+        {
+            "id" :"2"
+        }
+    ]
+}
+#####
+
+POST http://localhost:8092/api/product/addasync HTTP/1.1
+Content-Type: application/json
+
+{
+
+        "name"    : "TV HD 55 INCH",
+        "color"   : "red",
+        "categoryId": "1",
+        "size"    : "mediano",
+        "price"   : "425.25",
+        "stores"   : [
+        {
+            "id" :"1"
+        },
+        {
+            "id" :"2"
+        }
+        ]
+    
+}
+
+#####
+POST http://localhost:8092/api/product/addasync HTTP/1.1
+Content-Type: application/json
+
+{
+    
+        "name"    : "TV HD 55 INCH",
+        "color"   : "red",
+        "categoryId": "1",
+        "size"    : "mediano",
+        "price"   : "425.25",
+    "stores"   : [
+        {
+            "id" :"1"
+        },
+        {
+            "id" :"2"
+        }
+    ]
+}
+#####
+
+POST http://localhost:8092/api/product/addasync HTTP/1.1
+Content-Type: application/json
+
+{
+    
+        "name"      : "Carro 10",
+        "color"     : "Black",
+        "categoryId": "1",
+        "size"      : "mediano",
+        "price"     : "425.25",
+
+    "stores"        : [
+        {
+            "id"    : "1"
+        },
+        {
+            "id"    : "2"
+        }
+    ]
+}
+
+######
+
+GET http://localhost:8092/api/product/ HTTP/1.1
+Content-Type: application/json
+
+####
+
+GET http://localhost:8092/api/product/1 HTTP/1.1
+Content-Type: application/json
+####
+
+GET http://localhost:8092/api/product/ix/1/ HTTP/1.1
+Content-Type: application/json
+
+#### UPDATE
+
+PUT http://localhost:8092/api/product/update/1/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Air Condition split"
+}
+
+
+#####
+
+DELETE http://localhost:8092/api/product/delete/10/  HTTP/1.1
+
+#####
+
+POST http://localhost:8092/api/product/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "Lapto I5 HP 15.6 INC",
+    "color"   : "white",
+    "category": "1",
+    "size"    : "mediano",
+    "price"   : "750.25",
+    "store"   : "1"
+}
+
+##### GET PRODUCTO STORE CATEGORY
+GET http://localhost:8092/api/product/pages/list/1 HTTP/1.1
+Content-Type: application/json
+#### PAGINACION PORDUCT STORE CATEGORY
+GET http://localhost:8092/api/product/pages/list/2 HTTP/1.1
+Content-Type: application/json
+
+### PAGINACION
+GET http://localhost:8092/api/product/pages/1/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://localhost:8092/api/product/pages/2/ HTTP/1.1
+Content-Type: application/json
+
+
+####
+
+
+GET http://localhost:8092/api/product/pages/3/ HTTP/1.1
+Content-Type: application/json
+
+######
+
+GET http://localhost:8092/api/product/search/Carro HTTP/1.1
+Content-Type: application/json

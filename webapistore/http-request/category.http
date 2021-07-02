@@ -1,0 +1,63 @@
+
+POST http://localhost:8092/api/category/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "household appliance",
+    "keywords"  : "household"   
+}
+
+####
+
+POST http://localhost:8092/api/category/add HTTP/1.1
+Content-Type: application/json
+
+{
+   "name"    : "articule of clothing",
+    "keywords"  : "cloathing" 
+}
+
+#####
+
+GET http://localhost:8092/api/category/ HTTP/1.1
+Content-Type: application/json
+
+####
+
+GET http://localhost:8092/api/category/1 HTTP/1.1
+Content-Type: application/json
+
+
+####
+
+PUT http://localhost:8092/api/category/update/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "keywords" : "homes"
+}
+
+
+#####
+
+DELETE http://localhost:8092/api/category/delete/1  HTTP/1.1
+
+#####
+
+POST http://localhost:8092/api/category/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "Makeup",
+    "keywords"  : "profesionañ make up"   
+}
+
+#####
+
+POST http://localhost:8092/api/category/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "Maquillaje",
+    "keywords"  : "Ventas, color"   
+}

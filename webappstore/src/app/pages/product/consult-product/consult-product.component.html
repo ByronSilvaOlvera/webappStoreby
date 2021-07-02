@@ -1,0 +1,33 @@
+<div class="box-search">
+  <div class="mb-3 row box-search-product ">
+    <label for="name" class="col-sm-2 form-label">
+      Search <i class="fas fa-search"></i>
+    </label>
+    <div class="col-sm-8">
+
+      <input type="text" [(ngModel)]="name" #ctrl="ngModel" class=" form-control" id="name"
+        (keyup.enter)="onSearch()"
+        placeholder="Write Something..!">
+    </div>
+    <div  class="col-sm-2">
+        <button type="button" class="btn btn-outline-success" (click)="onSearch()" >
+            <i class="fas fa-search"></i>
+            Search
+        </button>
+    </div>
+    <div *ngIf="msgValidation" class="text-danger">
+      Please provide a valid .
+    </div>
+  </div>
+</div>
+<div *ngIf="status" >
+    <app-grid-product></app-grid-product>
+</div>
+<div *ngIf="!status" class="msg-consult" >
+    <div class="alert alert-warning " role="alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <p>
+            Enter a data 
+        </p>
+    </div>
+</div>

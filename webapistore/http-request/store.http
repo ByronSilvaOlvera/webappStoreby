@@ -1,0 +1,66 @@
+
+POST http://localhost:8092/api/store/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "North WareHouse",
+    "street"  : "calle four Florida",
+    "number"  : "505",
+    "zipcode" : "123456",
+    "city"    : "California",
+    "country" : "United State"
+}
+
+####
+
+POST http://localhost:8092/api/store/add HTTP/1.1
+Content-Type: application/json
+
+{
+   "name"    : "South WareHouse",
+    "street"  : "calle south Florida",
+    "number"  : "557 ",
+    "zipcode" : "123852",
+    "city"    : "Bellavista",
+    "country" : "Ecuador"
+}
+
+#####
+
+GET http://localhost:8092/api/store/ HTTP/1.1
+Content-Type: application/json
+
+####
+
+GET http://localhost:8092/api/store/1 HTTP/1.1
+Content-Type: application/json
+
+
+####
+
+PUT http://localhost:8092/api/store/update/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "North WareHouse Blue"
+}
+
+
+#####
+
+DELETE http://localhost:8092/api/store/delete/1  HTTP/1.1
+
+#####
+
+POST http://localhost:8092/api/store/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"    : "Easth WareHouse",
+    "street"  : "calle easth Boston",
+    "number"  : "557 ",
+    "zipcode" : "258936",
+    "city"    : "Rio de Azul",
+    "country" : "Uruguay",
+    "product" : "1"
+}

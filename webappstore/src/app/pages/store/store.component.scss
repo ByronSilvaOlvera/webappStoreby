@@ -1,0 +1,94 @@
+.grid{
+    height: 512px;
+}
+
+
+.info-registro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    p{
+        margin: 0;
+    }
+}
+
+.tab-content{
+    transition: 0.5s;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .Name-view{
+        width: calc(100% - 45%);
+        i{
+            margin: 0 1rem 0 0;
+        }
+    }
+    .transaccion{
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    div{
+        p{
+            margin: 0;
+        }
+    }
+    
+}
+
+.title-category{
+    margin: 0.5rem 2rem;
+}
+
+.cont-product{
+
+    
+    margin: 0.5rem 2rem;
+    
+    ul{
+        li{
+            button{
+                width: 130px;
+            }
+        }
+    }
+    .tab-content{
+        position: relative;
+        //overflow: scroll;
+        height: 512px;
+    }
+}
+
+.card-user {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    .user{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        i{
+            margin: 0 0.5rem;
+            font-size: 30px;
+        }
+    }
+    .date{
+        small{
+            font-size: 12px;
+        }
+    }
+}
+
+
+

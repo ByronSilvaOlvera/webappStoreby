@@ -1,0 +1,188 @@
+<div class="form-data" *ngIf="mostrarForm" >
+    <div class="cardz">
+
+      <h5 class="card-title">Data entry </h5>
+      <hr>
+    </div>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()"  >
+
+        <div class="mb-3 row">
+          <label for="name" class="col-sm-2 form-label">
+            Name </label>
+            <div class="col-sm-10" >
+
+              <input 
+              type="text" 
+              class=" form-control" 
+              id="name"
+              placeholder="name"
+              formControlName="name"    
+              >
+            </div>
+                <div *ngIf="msgValidation" class="text-danger">
+                    Please provide a valid .
+                </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="color" class="form-label col-sm-2">
+              Color </label>
+              <div class="col-sm-10" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="color"
+                placeholder="color"
+                formControlName="color"    
+                >
+                <div *ngIf="msgValidation" class="text-danger">
+                  Please provide a valid .
+                </div>
+              </div>  
+          </div>
+          <div class="mb-3 row">
+            <label for="category" class="col-sm-2 form-label">
+              Category </label>
+              <div class="col-sm-10" >
+
+                <ng-select [items]="categories"
+                          bindLabel="name"                          
+                          bindValue="id"
+                          placeholder="Select Category"
+                          formControlName="category" >
+                </ng-select> 
+
+
+                <!-- <select class="form-select " aria-label="Default select example" 
+                 placeholder="Select one category" >
+                  <option selected>Open this select menu</option>
+                  <option *ngFor="let category of categories" 
+                  value="{{category.id}}">{{ category.name }}</option>                
+                </select> -->
+              </div>
+
+              
+
+              <!-- <div class="col-sm-10" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="category"
+                placeholder="category"
+                formControlName="category"    
+                >
+              </div>   -->
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          <div class="row " >
+          <div class="col" >
+          <div class="mb-3 row">
+            <label for="size" class="col-sm-4 form-label">
+              Size </label>
+              <div class="col-sm-8" >
+
+                <input 
+                type="text" 
+                class="form-control" 
+                id="size"
+                placeholder="Size"
+                formControlName="size"    
+                >
+
+                <!-- <ng-select [items]="categories"
+                          bindLabel="name"                          
+                          bindValue="id"
+                          placeholder="Select Category"
+                          formControlName="category">
+                </ng-select>     -->
+
+              </div>
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          </div>
+          <div class="col">
+          <div class="mb-3 row">
+            <label for="price" class="col-sm-2 form-label">
+              Price </label>
+            <div class="col-sm-10" >
+              
+              <input 
+              type="text" 
+              class="form-control" 
+              id="price"
+              placeholder="Price"
+              formControlName="price"    
+              >
+            </div>  
+                  <div *ngIf="msgValidation" class="text-danger">
+                      Please provide a valid .
+                  </div>
+          </div>
+          </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="store" class="col-sm-2 form-label">
+              Store </label>
+              <div class="col-sm-10">
+                <ng-select [multiple]="true" 
+                  [items]="stores" 
+                  bindValue="id"
+                  bindLabel='name' 
+                  placeholder="Select Store"
+                  formControlName="stores"
+                  >
+                  <!-- <ng-option *ngFor="let car of stores" [value]="car.id"
+                  
+                  >{{car.name}}</ng-option> -->
+               </ng-select>
+              </div>
+            <!-- <div class="col-sm-10" >
+
+              <input 
+              type="text" 
+              class="form-control" 
+              id="store"
+              placeholder="Store"
+              formControlName="store"    
+              >
+            </div>   -->
+              <div *ngIf="msgValidation" class="text-danger">
+                  Please provide a valid .
+              </div>
+          </div>
+        
+          <div class="btn-form">
+            <button type="submit" class="btn btn-outline-success">
+                <i class="fas fa-save"></i>
+                <!-- {{ title == true? 'Save' : 'Update'  }} -->
+                Save
+              </button>
+              <button type="button" class="btn btn-outline-dark" 
+                (click)="resetForm()">
+                <i class="far fa-hand-peace"></i>
+                Reset
+              </button>
+              <button type="button" class="btn btn-outline-dark"
+                (click)="onListTab()">
+                <i class="fas fa-list"></i>
+                List
+              </button>
+          </div>
+    </form>
+</div>
+<div  class="form-msg" *ngIf="mostrarMsg" >
+    <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <div>
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div>
+          Select a product in List panel
+        </div>
+      </div>
+
+</div>

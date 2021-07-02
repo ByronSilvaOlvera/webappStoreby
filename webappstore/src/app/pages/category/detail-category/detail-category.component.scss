@@ -1,0 +1,60 @@
+
+.detail-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-detail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 50px;
+        
+        }
+    }
+
+    margin: 2rem 0 0 0;
+    .card{
+        width: 550px;
+        height: 290px;
+    }
+}
+
+
+.date-card{
+    margin-bottom: 1px;
+}
+
+.card-btn-category{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    button{
+        width: 130px;
+        margin-right: 2rem;
+    }
+}
+
+#icon-msg-detail{
+    div:nth-child(1){
+        i{
+            font-size: 35px;
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.detail-msg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .btn-form-msg{
+        button{
+            width: 130px;
+        }
+    }
+
+}

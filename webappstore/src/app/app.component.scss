@@ -1,0 +1,51 @@
+
+$colorMain : #e5e5ff;
+
+.body-store{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    //border: 2px solid orange;
+    transition: 0.5s;
+    min-width: 400px;
+    .navbar-main{
+        width: 300px;
+        height: 100%;
+        background-color: #3232ff;
+        transition: 0.5s;
+        
+    }
+    .contenido-main{
+        position: absolute;
+        left: 300px;
+        width: calc(100% - 300px);
+        height: 100vh;
+        background-color: $colorMain;
+        transition: 0.5s;
+        
+        //border: 2px solid brown;
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 992px) {}
+@media (max-width: 768px) {
+    .contenido-main{
+        left: 58px !important;
+        width: calc(100% - 60px) !important;
+        z-index: 1000;
+        transition: 1s;
+    }
+}
+@media (max-width: 480px){
+    .contenido-main{
+        left: 58px !important;
+        width: calc(100% - 60px) !important;
+        z-index: 1000;
+        transition: 1s;
+    }
+    
+   
+}
